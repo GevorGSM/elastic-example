@@ -1,4 +1,5 @@
 import base64 from 'base-64';
+import { API_URL } from './helpers';
 
 export const checkLogin = () => {
   return fetch(`${API_URL}/login/check`, {
