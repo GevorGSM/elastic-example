@@ -1,12 +1,7 @@
 import React from 'react'
-import { lazy, mount, redirect, route } from 'navi';
-import Login from './Login/Login';
+import { lazy, mount, redirect } from 'navi';
 
 export const routes = mount({
-  '/': route({
-    title: 'Login',
-    view: <Login />,
-  }),
-  '/search': lazy(() => import('./Search/search.route')),
+  '/': lazy(() => import('./Search/search.route')),
   '*': redirect('/'),
 });
